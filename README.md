@@ -1,4 +1,4 @@
-# knowledge-system
+# knowledge-system-front
 
 ## Project setup
 ```
