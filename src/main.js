@@ -17,7 +17,7 @@ import locale from "element-ui/lib/locale/lang/en";
 /*引入elementUI样式*/
 import 'element-ui/lib/theme-chalk/index.css';
 /*矢量图库引入*/
-import './icons'
+import '@/icons'
 
 Vue.config.productionTip = false
 /*Vue.use(elementPlus,{

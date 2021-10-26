@@ -2,11 +2,10 @@
   <div class="main:" :style="mainStyle">
       <div class="login" :style="loginStyle">
         <div id="header" style="text-align: center">
-          <div class="logo">
+          <div style="text-align: center">
             <svg-icon icon-class="java"></svg-icon>
-            <span>技术手册</span>
           </div>
-          <div></div>
+          <h2 class="login-title color-main">knowledge-system</h2>
         </div>
         <div id="main">
           <el-form autoComplete="on"
@@ -16,17 +15,25 @@
                    label-width="100px"
                    label-position="left"
                    size="mini">
-            <el-form-item label="用户名" prop="username">
+            <el-form-item prop="username">
               <el-input name="username"
                         type="text"
                         placeholder="请输入用户名"
-                        v-model="loginForm.username"></el-input>
+                        v-model="loginForm.username">
+                <span slot="prefix">
+                  <i class="el-icon-user-solid"></i>
+                </span>
+              </el-input>
             </el-form-item>
-            <el-form-item label="密 码" prop="password">
+            <el-form-item prop="password">
               <el-input name="password"
                         :type="pwdType"
                         placeholder="请输入密码"
-                        v-model="loginForm.password"></el-input>
+                        v-model="loginForm.password">
+                <span slot="prefix">
+                  <i class="el-icon-lock"></i>
+                </span>
+              </el-input>
             </el-form-item>
             <el-form-item>
               <el-button type="primary" @click.native.p.prevent="handleLogin">登录</el-button>
