@@ -1,4 +1,5 @@
 import request from '@/utlis/request'
+import VueRouter from '@/router/index'
 
 //定义登录方法
 export function login(loginInfo) {
@@ -19,6 +20,7 @@ export function login(loginInfo) {
         }
     }).then(function (rsp) {
         alert(rsp.status);
+        VueRouter.push({path: '/404'})
     }).catch(function (rsp) {
         alert(rsp.message);
     })

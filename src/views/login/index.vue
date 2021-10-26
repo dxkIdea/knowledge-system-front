@@ -3,11 +3,11 @@
       <div class="login" :style="loginStyle">
         <div id="header" style="text-align: center">
           <div style="text-align: center">
-            <svg-icon icon-class="java"></svg-icon>
+            <svg-icon icon-class="java" style="width: 56px;height: 56px;"></svg-icon>
           </div>
-          <h2 class="login-title color-main">knowledge-system</h2>
+          <h2 class="login-title color-main">Technology-System</h2>
         </div>
-        <div id="main">
+        <div id="main" >
           <el-form autoComplete="on"
                    :model="loginForm"
                    :rules="loginRules"
@@ -19,6 +19,7 @@
               <el-input name="username"
                         type="text"
                         placeholder="请输入用户名"
+                        autocomplete="on"
                         v-model="loginForm.username">
                 <span slot="prefix">
                   <i class="el-icon-user-solid"></i>
@@ -41,9 +42,9 @@
             </el-form-item>
           </el-form>
         </div>
-        <div id="footer">
+<!--        <div id="footer">
           <el-tag type="error">foot</el-tag>
-        </div>
+        </div>-->
       </div>
   </div>
 </template>
@@ -90,7 +91,7 @@
           position: 'absolute',
           top:'30%',
           left:'30%',
-          backgroundColor: 'white'
+          backgroundColor: '#73adc4',
         },
         //登录form表单
         loginForm: {
@@ -123,3 +124,9 @@
     }
   }
 </script>
+<style>
+  #main .el-input {
+    width: 80%;
+    position: static;
+  }
+</style>
